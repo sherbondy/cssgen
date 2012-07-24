@@ -170,3 +170,5 @@
     (map (comp compile-rule parse-rule))
     in-lines))
 
+(defn css-file [path & rules]
+  (spit path (apply css rules)))
